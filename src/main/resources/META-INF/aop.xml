@@ -1,13 +1,9 @@
 <aspectj>
     <aspects>
-        <aspect name="akka_debugging.monitor.MethodBang"/>
+        <aspect name="akka.MethodBang"/>
     </aspects>
     <weaver options="-XnoInline">
-        <include within="com.example.*"/>
-        <!--<include within="*"/>-->
-        <!--<include within="monitoring.*"/>-->
+        <include within="*"/>
         <include within="akka.actor.ScalaActorRef"/>
-        <!--<include within="scala.util.*"/>-->
     </weaver>
-    <weaver options="-showWeaveInfo"/>
 </aspectj>
